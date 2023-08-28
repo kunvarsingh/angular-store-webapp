@@ -1,0 +1,23 @@
+table {
+    width: 100%;
+  }
+ .mat-elevation-z8{
+    margin:100px !important;
+ }
+ .product-image{
+    height:20%;
+    width:20%;
+ }
+ .actions{
+   display: flex;
+   padding-top: 30px;
+   cursor: pointer;
+   height: 100px;
+ }
+ .create-product{
+   display: flex;
+   justify-content: end;
+   float: right;
+   border: 1px solid;
+   margin: 10px;
+ }

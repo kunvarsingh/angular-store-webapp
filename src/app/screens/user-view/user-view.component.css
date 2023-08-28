@@ -1,0 +1,25 @@
+.mat-elevation-z8{
+    margin:100px !important;
+ }
+ .product-card{
+    padding:20px;
+    width: 90%;
+    height:50%;
+ }
+ .footer{
+    display: flex;
+    justify-content: end;
+    padding: 5px;
+ }
+ .top-section{
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+ }
+ .grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Create 2 columns and auto-place rows */
+}
+.example-card{
+   cursor: pointer;
+}

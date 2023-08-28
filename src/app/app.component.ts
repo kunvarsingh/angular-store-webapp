@@ -7,4 +7,12 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'store-web-app';
+
+  checkIfUserLogin(){
+    return localStorage.getItem('username') && localStorage.getItem('password')
+  }
+
+  logout(){
+    localStorage.clear();
+  }
 }

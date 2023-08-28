@@ -1,0 +1,8 @@
+.mat-mdc-card.mdc-card{
+    padding:50px;
+}
+:host {
+    display: flex;
+    justify-content: center;
+    margin: 100px 0px;
+  }

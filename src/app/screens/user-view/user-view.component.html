@@ -1,0 +1,66 @@
+
+    <div class="mat-elevation-z8">
+        <div class="top-section">
+        <div>
+            <!-- <md-input #myInput placeholder="Item name..." [(ngModel)]="name"></md-input> -->
+            <mat-form-field class="example-full-width">
+            <input type="text"
+            placeholder="Search item name.."
+            aria-label="Category"
+            matInput
+            [(ngModel)]="name"
+            >
+            </mat-form-field>
+        </div>
+        <div>
+        <div>
+            <mat-form-field class="example-full-width">
+                <mat-label>Category</mat-label>
+                <input type="text"
+                        placeholder="Select Category"
+                        aria-label="Category"
+                        matInput
+                        [formControl]="myControl"
+                        [matAutocomplete]="auto">
+                <mat-autocomplete #auto="matAutocomplete" (optionSelected)="onSelectionChange($event)">
+                    <mat-option *ngFor="let option of filteredOptions | async" [value]="option">
+                    {{option}}
+                    </mat-option>
+                </mat-autocomplete>
+                </mat-form-field>
+        </div>
+    </div>
+</div>
+
+        <div class="grid">
+            <div *ngFor="let product of products | search: name" class="product-card">
+                    <mat-card class="example-card" (click)="expandView(product)">
+                        <mat-card-header>
+                          <mat-card-title-group>
+                            <mat-card-title>{{product.title}}</mat-card-title>
+                            <mat-card-subtitle>
+                                Price:{{product.price}}INR
+                                <br/>
+                                    <mat-icon *ngFor="let raiting of [].constructor(math.ceil(product.rating.rate))">
+                                        star
+                                      </mat-icon>
+                            </mat-card-subtitle>
+                            
+                            <img mat-card-xl-image src={{product.image}} >
+                          </mat-card-title-group>
+                        </mat-card-header>
+                        <mat-card-content>
+                          {{product.description}}
+                        </mat-card-content>
+                        <mat-card-footer class="footer">
+                            <mat-icon>
+                                like
+                              </mat-icon>
+                            <mat-icon>
+                                share
+                              </mat-icon>
+                        </mat-card-footer>
+                    </mat-card>
+            </div>
+        </div>
+    </div>

@@ -1,0 +1,12 @@
+<h2 mat-dialog-title>{{data.title}}</h2>
+<mat-dialog-content class="mat-typography">
+  <img src={{data.image}} class="product-image"/>
+  <h3>{{data.price}}INR</h3>
+  <mat-icon *ngFor="let raiting of [].constructor(math.ceil(data.rating.rate))">
+    star
+  </mat-icon>
+  <p>{{data.description}}</p>
+</mat-dialog-content>
+<mat-dialog-actions align="end">
+  <button mat-button mat-dialog-close >OK</button>
+</mat-dialog-actions>
